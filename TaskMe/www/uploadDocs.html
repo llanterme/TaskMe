@@ -1,0 +1,45 @@
+<div data-role="view" data-layout="mainLayout" data-title="Upload"  data-model="app.uploadDocsView.viewModel" id="uploadDocsView">
+
+    <ul data-role="listview" data-style="inset" data-type="group" id="uploadDocsListView">
+
+        <li>
+            
+            <ul>
+                <li>
+                    <label>
+                        Type:
+                        <select id="createProfileType" data-bind="value: createProfileType">
+                            <option value="SAID">SAID</option>
+                            <option value="Passport">Passport</option>
+                            <option value="Drivers">Drivers</option>
+
+                        </select>
+                    </label>
+                </li>
+                <li id="getPhotoButton"><a class="foo" data-role="button" data-bind="click: openActionSheet" data-icon="camera">Add Image</a> </li>
+
+
+            </ul>
+        </li>
+
+        </ul>
+
+
+    <!-- image preview -->
+    <ul data-role="listview" id="imagePreviewWrapper" data-style="inset" data-type="group" style="display:none;">
+        <li>
+            <ul id="itemImageList"></ul>
+        </li>
+    </ul>
+
+    <div id="itemCompleteWrapper" style="display:none;">
+        <ul data-role="listview" id="listItemFinish">
+            <li data-icon="add">
+                <a data-role="button" data-bind="click: saveOnlinePhoto" data-icon="arrow-e">Finish</a>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+

@@ -1,0 +1,46 @@
+<div data-role="view" data-layout="mainLayout" data-title="Register"  data-model="app.registerView.viewModel" id="registerView">
+
+    <ul data-role="listview" data-style="inset" data-type="group" id="registerBaseProfileListView">
+
+        <li>
+            
+            <ul>
+                <li>
+                    <label>
+                        Email: <span id="fooBar"><input data-bind="value: createProfileEmail" type="email" id="createProfileEmail" value=""></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Mobile: <span id="fooBar"><input type="number" data-bind="value: createProfileMobile" id="createProfileMobile" value=""></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Pin: <span id="fooBar"><input type="number" data-bind="value: createProfilePin" id="createProfilePin" value=""></span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Type:
+                        <select id="createProfileType" data-bind="value: createProfileType">
+                            <option value="Tasker">Tasker</option>
+                            <option value="Taskee">Taskee</option>
+
+                        </select>
+                    </label>
+                </li>
+
+                <li>
+                    <a class="foo" data-role="button" data-bind="click: CreateNewProfile" data-icon="add">Create</a>
+                </li>
+
+              
+            </ul>
+        </li>
+
+        </ul>
+
+
+</div>
+

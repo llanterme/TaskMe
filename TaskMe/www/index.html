@@ -1,0 +1,130 @@
+﻿<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="cordova.js"></script>
+	<script data-main="scripts/main" src="scripts/require.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.mobile.all.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.3.930/styles/kendo.mobile.nova.min.css" />
+   <link rel="stylesheet" href="css/custom.css" />
+
+
+</head>
+
+<body>
+
+	
+    <!-- Login Layout Page -->
+    <div data-role="layout" data-id="login">
+        <header data-role="header" id="mainNavHeader">
+            <div data-role="navbar">
+                <span data-role="view-title">Login</span>
+            </div>
+            <div data-role="navbar">
+            </div>
+        </header>
+    </div>
+
+    <!-- Main Layout Page -->
+    <div data-role="layout" data-id="mainLayout">
+        <header data-role="header" id="mainNavHeader">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+            <div data-role="navbar">
+            </div>
+        </header>
+        <div data-role="footer">
+            <div data-role="tabstrip" id="badges-tabs">
+                <a href="#homeView" data-icon="home">Home</a>
+                <a href="nfcView.html" data-icon="wifi">NFC</a>
+                <a href="barcodeView.html" data-icon="camera">Scan</a>
+                <a data-role="button" data-rel="drawer" href="#left-drawer" data-icon="drawer-icon">more</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- My Lists View -->
+    <div data-role="view" data-layout="login" id="loginView" data-model="app.loginView.viewModel" data-title="Login">
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <ul>
+                    <li>
+
+                        <div class="social-wrap a">
+
+                            <button id="facebook" data-bind="click: loginFacebook">Sign in with Facebook</button>
+
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="social-wrap a">
+
+                            <button id="googleplus" data-bind="click: loginGoogle">Sign in with Google</button>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="social-wrap a">
+
+                            <button id="twitter" data-bind="click: registerUser">Register</button>
+
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+   <!-- Drawer Menu-->
+    <div data-role="drawer" id="left-drawer" data-title="More" data-use-native-scrolling="true">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title">More options</span>
+            </div>
+        </header>
+        <ul data-role="listview" class="km-listview-icons">
+            <li>
+                <a href="beaconView.html" data-transition="none" data-icon="share">Beacon</a>
+            </li>
+            <li>
+                <a href="pushView.html" data-transition="none" data-icon="favorites">Push</a>
+            </li>
+
+            <li>
+                <a href="locationView.html" data-transition="none" data-icon="globe">Location</a>
+            </li>
+
+            <li>
+                <a href="azureView.html" data-transition="none" data-icon="bookmarks">Azure</a>
+            </li>
+
+
+        </ul>
+    </div>
+
+
+
+    <!-- Error handler-->
+    <div id="error-view" data-role="modalview">
+        <div class="error-header" data-role="header" style="display: none;">
+            <div data-role="navbar">
+                <span>Error</span>
+                <a data-click="app.utils.closeError" data-role="button" data-align="right">Close</a>
+            </div>
+        </div>
+        <div class="message"></div>
+    </div> 
+
+
+
+</body>
+
+</html>
